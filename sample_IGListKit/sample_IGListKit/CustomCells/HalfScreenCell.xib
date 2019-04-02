@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HalfScreenCell" id="SUi-yK-kUC" customClass="HalfScreenCell" customModule="sample_IGListKit" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="160" height="230"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                <rect key="frame" x="0.0" y="0.0" width="160" height="230"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qar-y7-Uud">
+                        <rect key="frame" x="0.0" y="0.0" width="160" height="230"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="isanhe" translatesAutoresizingMaskIntoConstraints="NO" id="Fna-bJ-4gA">
+                                <rect key="frame" x="0.0" y="0.0" width="160" height="160"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Fna-bJ-4gA" secondAttribute="height" multiplier="1:1" id="DN0-ZS-hHe"/>
+                                </constraints>
+                            </imageView>
+                            <view alpha="0.65000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ptF-j8-7pA">
+                                <rect key="frame" x="0.0" y="160" width="160" height="70"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Half Screen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LRA-q8-VSV">
+                                        <rect key="frame" x="35.5" y="24.5" width="89" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="LRA-q8-VSV" firstAttribute="centerY" secondItem="ptF-j8-7pA" secondAttribute="centerY" id="uUd-Fg-iaH"/>
+                                    <constraint firstItem="LRA-q8-VSV" firstAttribute="centerX" secondItem="ptF-j8-7pA" secondAttribute="centerX" id="xyY-FS-9cU"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Fna-bJ-4gA" firstAttribute="top" secondItem="qar-y7-Uud" secondAttribute="top" id="HnO-EN-WuQ"/>
+                            <constraint firstAttribute="bottom" secondItem="ptF-j8-7pA" secondAttribute="bottom" id="NQj-hq-0RF"/>
+                            <constraint firstItem="Fna-bJ-4gA" firstAttribute="leading" secondItem="qar-y7-Uud" secondAttribute="leading" id="aO9-kn-LPt"/>
+                            <constraint firstAttribute="trailing" secondItem="Fna-bJ-4gA" secondAttribute="trailing" id="c13-zD-m3L"/>
+                            <constraint firstItem="ptF-j8-7pA" firstAttribute="top" secondItem="Fna-bJ-4gA" secondAttribute="bottom" id="fBS-Fl-bx3"/>
+                            <constraint firstItem="ptF-j8-7pA" firstAttribute="leading" secondItem="qar-y7-Uud" secondAttribute="leading" id="nQZ-oZ-tg6"/>
+                            <constraint firstAttribute="width" constant="160" id="o7k-Qz-b3X"/>
+                            <constraint firstAttribute="trailing" secondItem="ptF-j8-7pA" secondAttribute="trailing" id="vLQ-md-ia9"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="qar-y7-Uud" secondAttribute="bottom" id="CqQ-6a-nzh"/>
+                <constraint firstItem="qar-y7-Uud" firstAttribute="leading" secondItem="SUi-yK-kUC" secondAttribute="leading" id="QKc-dF-Yp8"/>
+                <constraint firstItem="qar-y7-Uud" firstAttribute="top" secondItem="SUi-yK-kUC" secondAttribute="top" id="gv5-xh-MlF"/>
+                <constraint firstAttribute="trailing" secondItem="qar-y7-Uud" secondAttribute="trailing" id="kPu-Oa-t4S"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="aUS-lf-fjf"/>
+            <connections>
+                <outlet property="indexLabel" destination="LRA-q8-VSV" id="LiU-R0-kHM"/>
+                <outlet property="viewWidthConstraint" destination="o7k-Qz-b3X" id="qOo-0J-VdW"/>
+            </connections>
+            <point key="canvasLocation" x="-14.4" y="61.169415292353825"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="isanhe" width="200" height="186"/>
+    </resources>
+</document>

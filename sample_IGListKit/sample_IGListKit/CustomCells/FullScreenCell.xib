@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FullScreenCell" id="syo-Ub-2IW" customClass="FullScreenCell" customModule="sample_IGListKit" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r2T-yZ-Esx">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pikachu" translatesAutoresizingMaskIntoConstraints="NO" id="YeO-pn-5um">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="YeO-pn-5um" secondAttribute="height" multiplier="5:2" id="6Q9-UB-CNy"/>
+                                </constraints>
+                            </imageView>
+                            <view alpha="0.65000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H6q-4A-r95">
+                                <rect key="frame" x="0.0" y="128" width="320" height="72"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pull Screen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VWI-CT-g62">
+                                        <rect key="frame" x="117" y="25.5" width="86" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="VWI-CT-g62" firstAttribute="centerX" secondItem="H6q-4A-r95" secondAttribute="centerX" id="2ok-Cp-oIv"/>
+                                    <constraint firstItem="VWI-CT-g62" firstAttribute="centerY" secondItem="H6q-4A-r95" secondAttribute="centerY" id="pLd-pG-njs"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="320" id="2qU-EP-L9B"/>
+                            <constraint firstItem="YeO-pn-5um" firstAttribute="top" secondItem="r2T-yZ-Esx" secondAttribute="top" id="BOJ-mk-qD2"/>
+                            <constraint firstItem="YeO-pn-5um" firstAttribute="leading" secondItem="r2T-yZ-Esx" secondAttribute="leading" id="E8Z-Pl-0yL"/>
+                            <constraint firstAttribute="trailing" secondItem="YeO-pn-5um" secondAttribute="trailing" id="I0t-ar-gsU"/>
+                            <constraint firstItem="H6q-4A-r95" firstAttribute="leading" secondItem="r2T-yZ-Esx" secondAttribute="leading" id="fG9-74-w9O"/>
+                            <constraint firstItem="H6q-4A-r95" firstAttribute="top" secondItem="YeO-pn-5um" secondAttribute="bottom" id="nLs-qn-AwF"/>
+                            <constraint firstAttribute="bottom" secondItem="H6q-4A-r95" secondAttribute="bottom" id="wJh-L7-rDb"/>
+                            <constraint firstAttribute="trailing" secondItem="H6q-4A-r95" secondAttribute="trailing" id="xYu-Yt-6Z2"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="r2T-yZ-Esx" secondAttribute="trailing" id="3nw-Ux-qn1"/>
+                <constraint firstItem="r2T-yZ-Esx" firstAttribute="top" secondItem="syo-Ub-2IW" secondAttribute="top" id="8oh-0C-8V7"/>
+                <constraint firstItem="r2T-yZ-Esx" firstAttribute="leading" secondItem="syo-Ub-2IW" secondAttribute="leading" id="H83-lv-R2c"/>
+                <constraint firstAttribute="bottom" secondItem="r2T-yZ-Esx" secondAttribute="bottom" id="xfv-b9-9Ma"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="9Kd-7w-sdG"/>
+            <connections>
+                <outlet property="indexLabel" destination="VWI-CT-g62" id="otA-Lf-h83"/>
+                <outlet property="viewWidthConstraint" destination="2qU-EP-L9B" id="o7O-yv-IQE"/>
+            </connections>
+            <point key="canvasLocation" x="11.199999999999999" y="102.54872563718142"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="pikachu" width="318" height="159"/>
+    </resources>
+</document>
